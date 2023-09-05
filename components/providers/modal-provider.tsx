@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { CreateServerModal } from "../modal/create-server-modal";
+import { InviteModal } from "../modal/invite-modal";
 
 export const ModalProvider = () => {
   const [isMounted, setIsMounted] = useState(false);
@@ -15,6 +16,7 @@ export const ModalProvider = () => {
   return (
     <>
       <CreateServerModal />
+      <InviteModal />
     </>
   );
 };
