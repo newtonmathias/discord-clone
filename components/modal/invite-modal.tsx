@@ -14,9 +14,12 @@ import { Button } from "../ui/button";
 import { Check, Copy, RefreshCw } from "lucide-react";
 import { useState } from "react";
 import axios from "axios";
+import { useOrigin } from "@/hooks/use-origin";
 
 export const InviteModal = () => {
   const { isOpen, onOpen, onClose, type, data } = useModal();
+  const origin = useOrigin();
+
   const isModalOpen = isOpen && type === "invite";
   const { server } = data;
 
